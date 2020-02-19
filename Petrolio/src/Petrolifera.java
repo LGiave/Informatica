@@ -1,14 +1,14 @@
 import java.util.Vector;
 
-public class Petrolifera {
-    private Vector<Sito> siti;
+public class Petrolifera extends Vector<Sito>{
 
     public Petrolifera() {
-        siti=new Vector<Sito>();
+
     }
 
     public void addSito(Sito a){
-        siti.add(a);
+        this.add(a);
     }
+
 
 }

@@ -3,9 +3,15 @@ public class Marini extends Pozzi {
     private float profondita;
 
     public Marini () {
-        super();
-        this.capacitaEstrattiva= getCapacitaEstrattiva();
-        this.profondita= getProfondita();
+    }
+    public Marini(int codice, boolean attivo,float cap,float prof) throws ValoreNonValido{
+        super(codice,attivo);
+        this.capacitaEstrattiva=cap;
+        if(prof>0){
+            this.profondita=prof;
+        }else{
+            throw new ValoreNonValido("La profondità non può essere negativa");
+        }
     }
 
     public float getCapacitaEstrattiva() {

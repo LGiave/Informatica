@@ -27,4 +27,6 @@ public abstract class Pozzi {
     public int getCodice() {
         return codice;
     }
+
+    public abstract float getCapacitaEstrattiva();
 }

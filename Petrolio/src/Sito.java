@@ -2,17 +2,19 @@ import java.util.Vector;
 public class Sito {
     private String nome;
     private String nazione;
-    private float greggioEstratto;
-    private float profonditaMediaPozzi;
     private Vector<Pozzi> pozzi;
+    private int codice;
 
     public Sito(){
         this.nome="";
         this.nazione="";
         pozzi=new Vector<Pozzi>();
+        codice=0;
     }
 
     public void addPozzo(Pozzi b){
+        b.setCodice(this.codice);
+        codice++;
         pozzi.add(b);
     }
 
@@ -32,36 +34,26 @@ public class Sito {
         return nazione;
     }
 
-    public void setGreggioEstratto() {
+    public float greggioEstratto() {
         float tot=0f;
         for(int k=0; k<pozzi.size();k++){
-            if(pozzi.elementAt(k).isAttivo()==true && pozzi.elementAt(k) instanceof Terrestri ) {
-                tot = tot + ((Terrestri) pozzi.elementAt(k)).getCapacitaEstrattiva();
-            }else if(pozzi.elementAt(k).isAttivo()==true && pozzi.elementAt(k) instanceof Marini ) {
-                tot = tot + ((Marini) pozzi.elementAt(k)).getCapacitaEstrattiva();
+            if(pozzi.elementAt(k).isAttivo()){
+                tot = tot + pozzi.elementAt(k).getCapacitaEstrattiva();
             }
         }
-        this.greggioEstratto=tot;
+        return tot;
     }
 
-    public float getGreggioEstratto() {
-        return greggioEstratto;
-    }
-
-    public void setProfonditaMediaPozzi() {
+    public float profonditaMediaPozzi() {
         int j=0;
         float profondita=0f;
         for (int k=0;k<pozzi.size();k++){
             if(pozzi.elementAt(k) instanceof Marini){
                 j++;
-                profondita=profondita+((Marini) pozzi.elementAt(k)).getCapacitaEstrattiva();
+                profondita=profondita+(pozzi.elementAt(k)).getCapacitaEstrattiva();
             }
         }
-        this.profonditaMediaPozzi=profondita/j;
-    }
-
-    public float getProfonditaMediaPozzi() {
-        return profonditaMediaPozzi;
+        return profondita/j;
     }
 
     @Override
@@ -69,8 +61,8 @@ public class Sito {
         return "Sito{" +
                 "nome='" + nome + '\'' +
                 ", nazione='" + nazione + '\'' +
-                ", greggioEstratto=" + greggioEstratto +
-                ", profonditaMediaPozzi=" + profonditaMediaPozzi +
+                ", greggioEstratto=" + greggioEstratto() +
+                ", profonditaMediaPozzi=" + profonditaMediaPozzi() +
                 ", pozzi=" + pozzi +
                 '}';
     }

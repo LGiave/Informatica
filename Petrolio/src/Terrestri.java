@@ -1,16 +1,14 @@
 public class Terrestri extends Pozzi {
     private float capacitaEstrattiva;
-    private Terreni Terreno;
+    private Terreni terreno;
 
     public Terrestri() {
         super();
-        this.capacitaEstrattiva = getCapacitaEstrattiva();
-        Terreno = Terreni.ROCCIOSO ;
     }
 
     public Terrestri(float capacitaEstrattiva, Terreni terreno) {
         this.capacitaEstrattiva = capacitaEstrattiva;
-        Terreno = terreno;
+        terreno = terreno;
     }
 
     public void setCapacitaEstrattiva(float capacitaEstrattiva) {
@@ -31,7 +29,7 @@ public class Terrestri extends Pozzi {
                 "Codice=" + super.getCodice() +
                 "Stato=" + super.isAttivo() +
                 "capacitaEstrattiva=" + capacitaEstrattiva +
-                ", Terreno='" + Terreno + '\'' +
+                ", Terreno='" + terreno + '\'' +
                 '}';
     }
 }
