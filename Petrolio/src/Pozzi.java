@@ -29,4 +29,5 @@ public abstract class Pozzi {
     }
 
     public abstract float getCapacitaEstrattiva();
+
 }

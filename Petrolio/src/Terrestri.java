@@ -6,9 +6,10 @@ public class Terrestri extends Pozzi {
         super();
     }
 
-    public Terrestri(float capacitaEstrattiva, Terreni terreno) {
+    public Terrestri(int codice,boolean attivo, float capacitaEstrattiva, Terreni terreno) {
+        super(codice,attivo);
         this.capacitaEstrattiva = capacitaEstrattiva;
-        terreno = terreno;
+        this.terreno = terreno;
     }
 
     public void setCapacitaEstrattiva(float capacitaEstrattiva) {
@@ -21,6 +22,10 @@ public class Terrestri extends Pozzi {
 
     public void setTerreno( Terreni Terreno) {
         Terreno = Terreno;
+    }
+
+    public Terreni getTerreno() {
+        return terreno;
     }
 
     @Override

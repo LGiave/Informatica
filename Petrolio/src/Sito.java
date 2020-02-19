@@ -4,6 +4,7 @@ public class Sito {
     private String nazione;
     private Vector<Pozzi> pozzi;
     private int codice;
+    private Terreni terreno;
 
     public Sito(){
         this.nome="";
@@ -41,7 +42,7 @@ public class Sito {
                 tot = tot + pozzi.elementAt(k).getCapacitaEstrattiva();
             }
         }
-        return tot;
+        return tot/pozzi.size();
     }
 
     public float profonditaMediaPozzi() {
@@ -50,10 +51,13 @@ public class Sito {
         for (int k=0;k<pozzi.size();k++){
             if(pozzi.elementAt(k) instanceof Marini){
                 j++;
-                profondita=profondita+(pozzi.elementAt(k)).getCapacitaEstrattiva();
+                profondita=profondita+((Marini) pozzi.elementAt(k)).getProfondita();
             }
         }
         return profondita/j;
+    }
+    public Terreni getTerrenopozzo(Terrestri b){
+        return b.getTerreno();
     }
 
     @Override
