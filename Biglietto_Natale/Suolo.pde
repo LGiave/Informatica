@@ -1,7 +1,7 @@
 public class Suolo {
  private Rettangolo rectNeve; 
  private Circle[] suolo;
- int max=200;
+ int max=100;
  float y=900;
  float x=0;
  int i;
