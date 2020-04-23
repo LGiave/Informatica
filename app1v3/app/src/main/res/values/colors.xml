@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="coloreRosso">#ff000d</color>
+    <color name="colorRosso">#ff000d</color>
+    <color name="azzurroTrasparente">#33b5e5</color>
+    <color name="coloreBlu">#0000ff</color>
+    <color name="coloreVerde">#00ff00</color>
+    <color name="coloreVerdeFigo">#03fc66</color>
+    <color name="darkBackground">#1e211f</color>
+    <color name="coloreArancio">#eb6200</color>
+    <color name="coloreBianco">#ffffff</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <!--TRIS GAME COLORS-->
+    <color name="rossoTris">#ff0048</color>
+    <color name="verdeTris">#00ff77</color>
+    <color name="colorBlu">#00C0FF</color>
+</resources>
