@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MyApp</string>
+    <string name="saluta">Bienvenue!</string>
+    <string name="esempio1">Saluta</string>
+    <string name="esempio2">Gioco AltoBasso</string>
+</resources>
