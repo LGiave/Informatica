@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function valida() {
+// Variabili associate ai campi del modulo
+var nome = document.invio.nome.value;
+var cognome = document.invio.cognome.value;
+var sesso= document.invio.sesso.value;
+
+if ((nome == "") || (nome == "undefined")) {
+alert("Devi inserire un nome");
+document.invio.nome.focus();
+return false;
+
+if ((cognome == "") || (cognome == "undefined")) {
+alert("Devi inserire un nome");
+document.invio.cognome.focus();
+return false;
+document.getElementById("myCheck").style.display="none"
+function sposata(){
+    check= document.getElementById(check)
+    var x = document.createElement("input")
+    x.
+    x.appendChild(sposata)
+}    
+
+</script>
+<body>
+    <form method="post" name="invio">
+        <p><label>Nome</label><input type="text" name="nome"></p> 
+        <p><label>Cognome</label><input type="text" name="cognome"></p> 
+        <p><label>M:</label><input type="radio" name="M" onclick="sposata()"></p>
+        <p><label>F:</label><input type="radio" name="F"></p> Sposata <input type="checkbox" id="myCheck">
+        <br>
+        <input type="submit" value="Invia" onclick="valida()"></p>
+        </form>
+</body>
+</html>

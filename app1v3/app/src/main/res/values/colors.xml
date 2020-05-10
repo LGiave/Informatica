@@ -4,7 +4,6 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="coloreRosso">#ff000d</color>
-    <color name="colorRosso">#ff000d</color>
     <color name="azzurroTrasparente">#33b5e5</color>
     <color name="coloreBlu">#0000ff</color>
     <color name="coloreVerde">#00ff00</color>
@@ -18,5 +17,4 @@
     <!--TRIS GAME COLORS-->
     <color name="rossoTris">#ff0048</color>
     <color name="verdeTris">#00ff77</color>
-    <color name="colorBlu">#00C0FF</color>
 </resources>
